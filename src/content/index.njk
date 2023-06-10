@@ -6,8 +6,14 @@ eleventyNavigation:
 numberOfLatestPostsToShow: 3
 ---
 </br>
+</br>
+</br>
+</br>
+</br>
+</br>
 <body>
-  <h1>Hey, I'm Zane, A Software Engineer from Dallas</h1>
+  <div class="landing-block">
+  <h1>Hey, I'm Zane - A Software Engineer from Dallas</h1>
   <p>
     Guided by the words of W. H. Auden, "We are all here on earth to help others; what on earth the others are here for I don't know," I am motivated to persist in the face of challenges and utilize my growing skillset to benefit those in need.
   </p>
@@ -17,15 +23,34 @@ numberOfLatestPostsToShow: 3
   <p>
     In my downtime, I enjoy cultivating unconventional skills such as billiards, darts, calligraphy, and bowling.
   </p>
+  </div>
 </body>
 </br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<h1>Featured Work</h1>
+<div class="featured-works">
+  {% for post in collections.pinned %}
+    <div class="work-post">
+      <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+      <p>{{ post.data.title }}</p> <!-- Overlay description on image -->
+    </div>
+  {% endfor %}
+</div>
 
-<h1>My Recent Work</h1>
 </br>
 
+<h1>My Recent Blog Posts</h1>
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>My Recent Blog Posts{% if latestPostsCount != 1 %}{% endif %}</h1>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
@@ -33,7 +58,7 @@ numberOfLatestPostsToShow: 3
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found on my <a href="/blog/">blog page</a>.</p>
 {% endif %}
 
 {# List every content page in the project #}
