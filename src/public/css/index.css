@@ -162,7 +162,6 @@ header {
 	font-size: 1.25em;
 	/* 16px /16 */
 	font-weight: 700;
-	margin-right: 2em;
 }
 
 .home-link:link:not(:hover) {
@@ -170,10 +169,6 @@ header {
 }
 
 /* Nav */
-.nav {
-	display: flex;
-	margin-left: 20em;
-}
 
 .nav-item {
 	font-size: 1.25em;
@@ -188,6 +183,10 @@ header {
 
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
+}
+
+.ml-auto {
+	margin-left: auto !important;
 }
 
 /* Posts list */
