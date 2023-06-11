@@ -226,6 +226,15 @@ header {
 	padding-bottom: 10px;
 }
 
+.postlist-link:hover,
+.postlist-item:hover h4 {
+	font-weight: 800;
+}
+
+.postlist-link:hover {
+	border-bottom: solid 2px #909ca7;
+}
+
 /* Tags */
 .post-tag {
 	display: inline-flex;
@@ -333,7 +342,7 @@ h2+.header-anchor {
 }
 
 .featured-works {
-	margin-bottom: 6em;
+	margin-bottom: 8em;
 }
 
 .recent-blogs {
