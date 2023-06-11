@@ -329,6 +329,7 @@ nav {
 	flex-wrap: wrap;
 	align-items: baseline;
 	margin-bottom: 1em;
+	border-bottom: solid 1px #909ca7;
 }
 
 
@@ -339,6 +340,15 @@ nav {
 
 .postlist-item a {
 	text-decoration: none;
+}
+
+.postlist-item:hover {
+	border-bottom: solid 2px #909ca7;
+}
+
+.postlist-item:hover .postlist-date,
+.postlist-item:hover h4 {
+	font-weight: 800;
 }
 
 .postlist-date {
@@ -352,17 +362,37 @@ nav {
 	font-size: 1.35rem;
 	font-weight: 400;
 	flex-basis: 100%;
-	border-bottom: solid 1px #909ca7;
-	padding-bottom: 10px;
 }
 
-.postlist-link:hover,
-.postlist-item:hover h4 {
-	font-weight: 800;
-}
+@media screen and (max-width: 450px) {
+	.postlist-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding-bottom: 0;
+	}
 
-.postlist-link:hover {
-	border-bottom: solid 2px #909ca7;
+	.postlist-link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.postlist-item:hover .postlist-date {
+		font-weight: 800;
+	}
+
+	.postlist-date {
+		float: none;
+		text-align: center;
+	}
+
+	.postlist-item h4 {
+		text-align: center;
+		margin: 0;
+	}
 }
 
 /* Tags */
