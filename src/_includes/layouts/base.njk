@@ -35,21 +35,32 @@
 		<link rel="icon" href="/img/icon.png" type="image/x-icon">
 	</head>
 	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
-
 		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+			<div class="nav-container">
+				<a href="/" class="home-link">{{ metadata.title }}</a>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul>
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				<li class="nav-item"><a href="mailto:zanebartlet1@gmail.com" class="hire-me">Hire Me</a></li>
-				</ul>
-			</nav>
+				<input type="checkbox" id="hamburger-checkbox" class="hamburger-checkbox">
+				<label for="hamburger-checkbox" class="hamburger">
+					<div></div>
+					<div></div>
+					<div></div>
+				</label>
+
+				<label for="hamburger-checkbox" class="hamburger-menu-label">
+					<nav>
+						<ul>
+							{%- for entry in collections.all | eleventyNavigation %}
+								<li class="nav-item">
+									<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+								</li>
+							{%- endfor %}
+							<li class="nav-item">
+								<a href="mailto:zanebartlet1@gmail.com" class="hire-me">Hire Me</a>
+							</li>
+						</ul>
+					</nav>
+				</label>
+			</div>
 		</header>
 
 		<div class="content-container">
@@ -57,9 +68,5 @@
 				{{ content | safe }}
 			</main>
 		</div>
-
-		<footer></footer>
-
-		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>
 </html>
