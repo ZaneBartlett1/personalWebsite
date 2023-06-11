@@ -132,7 +132,6 @@ code {
 pre:not([class*="language-"]) {
 	margin: .5em 0;
 	line-height: 1.375;
-	/* 22px /16 */
 	-moz-tab-size: var(--syntax-tab-size);
 	-o-tab-size: var(--syntax-tab-size);
 	tab-size: var(--syntax-tab-size);
@@ -160,7 +159,6 @@ header {
 
 .home-link {
 	font-size: 1.25em;
-	/* 16px /16 */
 	font-weight: 700;
 }
 
@@ -181,9 +179,10 @@ header {
 	text-decoration: none;
 }
 
-.nav a[href][aria-current="page"] {
+.nav-item a[href][aria-current="page"] {
 	text-decoration: underline;
 }
+
 
 .ml-auto {
 	margin-left: auto !important;
