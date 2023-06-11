@@ -18,32 +18,33 @@ numberOfLatestPostsToShow: 3
     In my downtime, I enjoy cultivating unconventional skills such as billiards, darts, calligraphy, and bowling.
   </p>
   </div>
+
+  <div class="featured-works">
+    <h1>Featured Work</h1>
+    {% for post in collections.pinned %}
+      <div class="work-post">
+        <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+        <p><span class="hover-text">{{ post.data.title }}</span></p> <!-- Overlay description on image -->
+      </div>
+    {% endfor %}
+  </div>
+
+  </br>
+  <div class="recent-blogs">
+    <h1>My Recent Blog Posts</h1>
+    {% set postsCount = collections.posts | length %}
+    {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+
+    {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+    {% set postslistCounter = postsCount %}
+    {% include "postslist.njk" %}
+
+    {% set morePosts = postsCount - numberOfLatestPostsToShow %}
+    {% if morePosts > 0 %}
+    <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found on my <a href="/blog/">blog page</a>.</p>
+    {% endif %}
+  </div>
 </body>
-
-<h1>Featured Work</h1>
-<div class="featured-works">
-  {% for post in collections.pinned %}
-    <div class="work-post">
-      <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
-      <p>{{ post.data.title }}</p> <!-- Overlay description on image -->
-    </div>
-  {% endfor %}
-</div>
-
-</br>
-
-<h1>My Recent Blog Posts</h1>
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
-
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found on my <a href="/blog/">blog page</a>.</p>
-{% endif %}
 
 {# List every content page in the project #}
 {#
