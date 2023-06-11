@@ -54,8 +54,10 @@ html {
 	overflow-y: scroll;
 }
 
-body {
+.content-container {
 	max-width: 70em;
+	margin: 0 auto;
+	padding: 1rem;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -160,6 +162,7 @@ header {
 .home-link {
 	font-size: 1.25em;
 	font-weight: 700;
+	margin-left: 15em;
 }
 
 .home-link:link:not(:hover) {
@@ -168,11 +171,19 @@ header {
 
 /* Nav */
 
+nav {
+	display: flex;
+	justify-content: space-between;
+	/* center the items horizontally */
+	flex-wrap: wrap;
+}
+
 .nav-item {
 	font-size: 1.25em;
-	display: inline-block;
+	display: inline-flex;
+	/* changed to flex */
 	margin-right: 2em;
-	font-weight: bold
+	font-weight: bold;
 }
 
 .nav-item a[href]:not(:hover) {
@@ -183,9 +194,20 @@ header {
 	text-decoration: underline;
 }
 
+.hire-me {
+	display: inline-block;
+	padding: 5px 15px;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 0;
+	border: 2px solid;
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.6);
+	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
-.ml-auto {
-	margin-left: auto !important;
+.hire-me:hover {
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.6);
+	transform: translate(6px, 6px);
 }
 
 /* Posts list */

@@ -41,19 +41,22 @@
 			<a href="/" class="home-link">{{ metadata.title }}</a>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav class="ml-auto">
+			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul>
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
+				<li class="nav-item"><a href="mailto:zanebartlet1@gmail.com" class="hire-me">Hire Me</a></li>
 				</ul>
 			</nav>
 		</header>
 
-		<main id="skip">
-			{{ content | safe }}
-		</main>
+		<div class="content-container">
+			<main id="skip">
+				{{ content | safe }}
+			</main>
+		</div>
 
 		<footer></footer>
 
