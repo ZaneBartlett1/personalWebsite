@@ -54,12 +54,6 @@ html {
 	overflow-y: scroll;
 }
 
-.content-container {
-	max-width: 70em;
-	margin: 0 auto;
-	padding: 1rem;
-}
-
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
 	clip: rect(0 0 0 0);
@@ -97,7 +91,9 @@ a[href]:active {
 }
 
 main {
-	padding: 1rem;
+	max-width: 70em;
+	margin: 0 auto;
+	margin-top: 6.5em;
 }
 
 header {
@@ -321,7 +317,8 @@ nav {
 /* Posts list */
 .postlist {
 	list-style: none;
-	padding-left: .5em;
+	padding-left: 0;
+	padding-right: 3.5em;
 }
 
 .postlist-item {
@@ -393,6 +390,13 @@ nav {
 		text-align: center;
 		margin: 0;
 	}
+
+}
+
+.image-container img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 /* Tags */
@@ -450,25 +454,48 @@ h2+.header-anchor {
 }
 
 /* Handling images */
-.image-container img {
-	width: 20em;
-}
 
 .work-post {
 	position: relative;
 	/* Display posts side by side */
-	display: inline-block;
+	display: inline-flex;
 	margin: 1em;
+	width: calc(29%);
+	/* if you want three images per row. Change this percentage to fit your needs. */
+	overflow: hidden;
+	/* Add overflow hidden to prevent image overflow */
+}
+
+.work-post:first-of-type {
+	margin-left: 0;
+}
+
+.work-post:last-of-type {
+	margin-right: 0;
 }
 
 .work-post img {
-	width: 30em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* fill the entire container, ignoring aspect ratio */
+}
+
+/* You can adjust the percentage to get the aspect ratio you want. */
+.work-post:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+	/* aspect ratio 4:3, for 1:1 use 100%, for 16:9 use 56.25% */
 }
 
 .work-post p {
 	/* Overlay description on image */
 	position: absolute;
-	top: -28px;
+	top: -25px;
 	left: 0;
 	width: 100%;
 	height: 100%;
@@ -493,18 +520,32 @@ h2+.header-anchor {
 	opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+	.work-post {
+		width: 75%;
+		display: block;
+		margin: auto;
+		margin-bottom: 2rem;
+	}
+
+	.work-post:first-of-type,
+	.work-post:last-of-type {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.section {
+	margin-bottom: 4em;
+}
+
+.landing-block,
+.featured-works,
+.recent-blogs {
+	padding: 2rem;
+}
 
 .landing-block {
 	max-width: 600px;
 	font-size: 14pt;
-	margin-top: 6em;
-	margin-bottom: 10em;
-}
-
-.featured-works {
-	margin-bottom: 8em;
-}
-
-.recent-blogs {
-	margin-bottom: 10em;
 }

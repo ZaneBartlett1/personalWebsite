@@ -6,32 +6,32 @@ eleventyNavigation:
 numberOfLatestPostsToShow: 3
 ---
 <body>
-  <div class="landing-block">
-  <h1>Hey, I'm Zane - A Software Engineer from Dallas</h1>
-  <p>
-    Guided by the words of W. H. Auden, "We are all here on earth to help others; what on earth the others are here for I don't know," I am motivated to persist in the face of challenges and utilize my growing skillset to benefit those in need.
-  </p>
-  <p>
-    As I continue to advance in my career, I am determined to explore and refine my proficiency in machine learning, maximizing the potential of these tools in addressing pressing global issues and contributing to a more stable world.
-  </p>
-  <p>
-    In my downtime, I enjoy cultivating unconventional skills such as billiards, darts, calligraphy, and bowling.
-  </p>
+  <div class="section landing-block">
+    <h1>Hey, I'm Zane - A Software Engineer from Dallas</h1>
+    <p>
+      Guided by the words of W. H. Auden, "We are all here on earth to help others; what on earth the others are here for I don't know," I am motivated to persist in the face of challenges and utilize my growing skillset to benefit those in need.
+    </p>
+    <p>
+      As I continue to advance in my career, I am determined to explore and refine my proficiency in machine learning, maximizing the potential of these tools in addressing pressing global issues and contributing to a more stable world.
+    </p>
+    <p>
+      In my downtime, I enjoy cultivating unconventional skills such as billiards, darts, calligraphy, and bowling.
+    </p>
   </div>
 
-  <div class="featured-works">
+  <div class="section featured-works">
     <h1>Featured Work</h1>
     {% for post in collections.pinned %}
       <div class="work-post">
         <a href="{{ post.url }}">
           <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
-          <p><span class="hover-text">{{ post.data.title }}</span></p> <!-- Overlay description on image -->
+          <p><span class="hover-text">{{ post.data.title }}</span></p>
         </a>
       </div>
     {% endfor %}
   </div>
 
-  <div class="recent-blogs">
+  <div class="section recent-blogs">
     <h1>My Recent Blog Posts</h1>
     {% set postsCount = collections.posts | length %}
     {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -42,7 +42,7 @@ numberOfLatestPostsToShow: 3
 
     {% set morePosts = postsCount - numberOfLatestPostsToShow %}
     {% if morePosts > 0 %}
-    <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found on my <a href="/blog/">blog page</a>.</p>
+      <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found on my <a href="/blog/">blog page</a>.</p>
     {% endif %}
   </div>
 </body>

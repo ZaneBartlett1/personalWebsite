@@ -8,16 +8,9 @@ tags:
 image: /work/firstpost/image.png
 ---
 
-<style>
-  .image-container {
-    width: 200rem;
-    aspect-ratio: 4 / 4;
-  }
-</style>
-
 [comment]: # (feature image)
-<div class="image-container img">
-  <img src="/work/firstpost/image.png" alt="alt-text">
+<div class="image-container">
+  <img src="{{ image }}" alt="{{ title }}">
 </div>
 
 [comment]: # (text about what DallasByMetro is and my part in it)
