@@ -5,12 +5,12 @@ date: 2018-05-01
 tags:
   - another tag
   - pinned
-image: /work/firstpost/image.png
+image: /work/secondpost/image.png
 ---
 
 [comment]: # (feature image)
 <div class="image-container">
-<img src="/work/firstpost/image.png" alt="alt-text">
+<img src="/work/secondpost/image.png" alt="alt-text">
 </div>
 
 [comment]: # (text about what DallasByMetro is and my part in it)

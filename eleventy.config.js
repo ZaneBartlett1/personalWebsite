@@ -13,13 +13,10 @@ const pluginImages = require("./eleventy.config.images.js");
 module.exports = function (eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
-	eleventyConfig.addPassthroughCopy({
-		"./src/public/": "src/",
-		"./node_modules/prismjs/themes/prism-okaidia.css": "src/public/css/prism-okaidia.css",
-		"./src/content/work/*": "work/*",
-		"./src/content/blog/*": "blog/*",
-		"./src/public/img/icon.png": "img/"
-	});
+	eleventyConfig.addPassthroughCopy("src/content/**/*.(jpg|jpeg|png|gif|avif|webp)");
+	eleventyConfig.addPassthroughCopy("./src/public/**");
+	// eleventyConfig.addPassthroughCopy("./src/public/img/icon.png");
+
 
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
