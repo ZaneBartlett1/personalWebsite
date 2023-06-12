@@ -4,7 +4,9 @@ eleventyNavigation:
   key: Blog
   order: 2
 ---
-<h1>Blog</h1>
+<div class="page">
+  <h1>Blog</h1>
 
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+  {% set postslist = collections.posts %}
+  {% include "postslist.njk" %}
+</div>

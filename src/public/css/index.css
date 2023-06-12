@@ -318,7 +318,6 @@ nav {
 .postlist {
 	list-style: none;
 	padding-left: 0;
-	padding-right: 3.5em;
 }
 
 .postlist-item {
@@ -361,7 +360,7 @@ nav {
 	flex-basis: 100%;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
 	.postlist-item {
 		display: flex;
 		align-items: center;
@@ -528,6 +527,11 @@ h2+.header-anchor {
 		margin-bottom: 2rem;
 	}
 
+	.page h1 {
+		display: flex;
+		justify-content: center;
+	}
+
 	.work-post:first-of-type,
 	.work-post:last-of-type {
 		margin-left: auto;
@@ -548,4 +552,8 @@ h2+.header-anchor {
 .landing-block {
 	max-width: 600px;
 	font-size: 14pt;
+}
+
+.page {
+	padding: 2em;
 }
