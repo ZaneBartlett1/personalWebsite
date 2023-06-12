@@ -6,7 +6,7 @@ eleventyNavigation:
 numberOfLatestPostsToShow: 3
 ---
 <body>
-  <div class="section landing-block">
+  <section id="landing-block">
     <h1>Hey, I'm Zane - A Software Engineer from Dallas</h1>
     <p>
       Guided by the words of W. H. Auden, "We are all here on earth to help others; what on earth the others are here for I don't know," I am motivated to persist in the face of challenges and utilize my growing skillset to benefit those in need.
@@ -17,9 +17,9 @@ numberOfLatestPostsToShow: 3
     <p>
       In my downtime, I enjoy cultivating unconventional skills such as billiards, darts, calligraphy, and bowling.
     </p>
-  </div>
+  </section>
 
-  <div class="section featured-works">
+  <section id="featured-works">
     <h1>Featured Work</h1>
     {% for post in collections.pinned %}
       <div class="work-post">
@@ -29,9 +29,10 @@ numberOfLatestPostsToShow: 3
         </a>
       </div>
     {% endfor %}
-  </div>
+    <button class="view-more-button" onclick="location.href='/work/'"> View More </button>
+  </section>
 
-  <div class="section recent-blogs">
+  <section id="recent-blogs">
     <h1>My Recent Blog Posts</h1>
     {% set postsCount = collections.posts | length %}
     {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -42,9 +43,9 @@ numberOfLatestPostsToShow: 3
 
     {% set morePosts = postsCount - numberOfLatestPostsToShow %}
     {% if morePosts > 0 %}
-      <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found on my <a href="/blog/">blog page</a>.</p>
+      <button class="view-more-button" onclick="location.href='/blog/'"> View More </button>
     {% endif %}
-  </div>
+  </section>
 </body>
 
 {# List every content page in the project #}

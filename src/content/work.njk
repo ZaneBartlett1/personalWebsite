@@ -4,13 +4,14 @@ eleventyNavigation:
   key: Work
   order: 3
 ---
-<h1>All Work</h1>
-
-<div class="featured-works">
+<div class="page">
+  <h1>All Work</h1>
   {% for post in collections.work %}
     <div class="work-post">
-      <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
-      <p><span class="hover-text">{{ post.data.title }}</span></p> <!-- Overlay description on image -->
+      <a href="{{ post.url }}">
+        <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+        <p><span class="hover-text">{{ post.data.title }}</span></p>
+      </a>
     </div>
   {% endfor %}
 </div>
