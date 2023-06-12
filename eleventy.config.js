@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy("src/content/**/*.(jpg|jpeg|png|gif|avif|webp)");
 	eleventyConfig.addPassthroughCopy("./src/public/**");
-	// eleventyConfig.addPassthroughCopy("./src/public/img/icon.png");
+	eleventyConfig.addPassthroughCopy({ "./src/public/img/icon.png": "img/icon.png" });
 
 
 	// Run Eleventy when these files change:
