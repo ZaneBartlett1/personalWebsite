@@ -2,39 +2,21 @@
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-}
 
-/* Theme colors */
-:root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
+	--color-gray-20: #212529;
+	--color-gray-50: #212529;
+	--color-gray-90: #212529;
 
-	--background-color: #fff;
-
-	--text-color: #212529;
 	--text-color-link: #212529;
 	--text-color-link-active: #212529;
 	--text-color-link-visited: #212529;
 
+	--base-white: #ffffff;
+	--base-black: #000000D9;
+	--base-grey: #5c6e7e;
+
 	--syntax-tab-size: 2;
 }
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #212529;
-		--color-gray-50: #212529;
-		--color-gray-90: #212529;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #212529;
-		--text-color-link-active: #212529;
-		--text-color-link-visited: #212529;
-
-		--background-color: #ffffff;
-	}
-}
-
 
 /* Global stylesheet */
 * {
@@ -47,22 +29,15 @@ body {
 	margin: 0 auto;
 	font-family: var(--font-family);
 	color: var(--text-color);
-	background-color: var(--background-color);
+	background-color: var(--base-white);
+}
+
+body {
+	margin-bottom: 10em;
 }
 
 html {
 	overflow-y: scroll;
-}
-
-/* https://www.a11yproject.com/posts/how-to-hide-content/ */
-.visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
 }
 
 p:last-child {
@@ -96,20 +71,9 @@ main {
 	margin-top: 6.5em;
 }
 
-header {
-	border-bottom: 1px solid;
-	max-width: 100%;
-}
-
-header:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
 .links-nextprev {
 	list-style: none;
-	border-top: 1px dashed var(--color-gray-20);
+	border-top: 1px dashed var(--base-grey);
 	padding: 1em 0;
 }
 
@@ -149,6 +113,8 @@ code {
 
 /* Header */
 header {
+	border-bottom: 1px solid;
+	max-width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -156,12 +122,18 @@ header {
 	position: sticky;
 	top: 0;
 	z-index: 1000;
-	background-color: #fff;
+	background-color: var(--base-white);
+}
+
+header:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .home-link {
 	font-size: 1.25em;
-	font-weight: 700;
+	font-weight: bold;
 	margin-left: 2rem;
 }
 
@@ -170,7 +142,6 @@ header {
 }
 
 /* Nav */
-
 .nav-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -185,14 +156,12 @@ header {
 nav {
 	display: flex;
 	justify-content: space-between;
-	/* center the items horizontally */
 	flex-wrap: wrap;
 }
 
 .nav-item {
 	font-size: 1.25em;
 	display: inline-flex;
-	/* changed to flex */
 	margin-right: 2em;
 	font-weight: bold;
 }
@@ -209,20 +178,19 @@ nav {
 	display: inline-block;
 	padding: 5px 15px;
 	text-decoration: none;
-	color: #fff;
+	color: var(--base-white);
 	border-radius: 0;
 	border: 2px solid;
-	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.6);
+	box-shadow: 6px 6px 0px var(--base-black);
 	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .hire-me:hover {
-	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.6);
+	box-shadow: 0px 0px 0px var(--base-black);
 	transform: translate(6px, 6px);
 }
 
 /* Hamburger menu styles */
-
 .hamburger {
 	display: none;
 	flex-direction: column;
@@ -236,14 +204,14 @@ nav {
 .hamburger div {
 	width: 2rem;
 	height: 0.25rem;
-	background-color: #333;
+	background-color: var(--base-black);
 	transition: all 0.3s linear;
 	position: relative;
 	transform-origin: 1px;
 }
 
-/* Hide the checkbox */
 .hamburger-checkbox {
+	/* Hide the checkbox */
 	position: absolute;
 	height: 1px;
 	width: 1px;
@@ -251,13 +219,9 @@ nav {
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* Styles to show menu when hamburger is checked */
-
 .hamburger-checkbox:checked~.hamburger-menu-label nav {
 	display: block;
 }
-
-/* Media query for smaller screens */
 
 @media screen and (max-width: 768px) {
 	.nav-item {
@@ -272,27 +236,16 @@ nav {
 
 	.hamburger-menu-label nav {
 		position: fixed;
-		/* Change from absolute to fixed */
 		display: none;
-		/* Hide the element */
 		width: 100%;
-		/* Full width */
 		height: 100%;
-		/* Full height */
 		top: 0;
-		/* Position at the top */
 		left: 0;
-		/* Position at the left */
-		background-color: rgba(0, 0, 0, 0.85);
-		/* Semi-transparent background */
+		background-color: var(--base-black);
 		justify-content: center;
-		/* Center items horizontally */
 		align-items: center;
-		/* Center items vertically */
 		flex-direction: column;
-		/* Stack items vertically */
 		transition: transform 0.3s ease-in-out;
-		/* Ensure it appears above other content */
 		z-index: 999;
 	}
 
@@ -310,7 +263,7 @@ nav {
 	}
 
 	.hamburger-checkbox:checked~.hamburger-menu-label .nav-item a {
-		color: #ffffff;
+		color: var(--base-white);
 	}
 }
 
@@ -318,7 +271,6 @@ nav {
 .postlist {
 	list-style: none;
 	padding-left: 0;
-	padding-right: 3.5em;
 }
 
 .postlist-item {
@@ -326,7 +278,7 @@ nav {
 	flex-wrap: wrap;
 	align-items: baseline;
 	margin-bottom: 1em;
-	border-bottom: solid 1px #909ca7;
+	border-bottom: solid 1px var(--base-grey);
 }
 
 
@@ -340,7 +292,7 @@ nav {
 }
 
 .postlist-item:hover {
-	border-bottom: solid 2px #909ca7;
+	border-bottom: solid 2px var(--base-grey);
 }
 
 .postlist-item:hover .postlist-date,
@@ -352,7 +304,7 @@ nav {
 	font-size: 1.125rem;
 	float: right;
 	text-align: right;
-	color: #5c6e7e;
+	color: var(--base-grey);
 }
 
 .postlist-link {
@@ -361,7 +313,11 @@ nav {
 	flex-basis: 100%;
 }
 
-@media screen and (max-width: 450px) {
+.postlist {
+	margin-bottom: 2em;
+}
+
+@media screen and (max-width: 768px) {
 	.postlist-item {
 		display: flex;
 		align-items: center;
@@ -426,44 +382,14 @@ nav {
 	margin-right: 1em;
 }
 
-/* Direct Links / Markdown Headers */
-.header-anchor {
-	text-decoration: none;
-	font-style: normal;
-	font-size: 1em;
-	margin-left: .1em;
-}
-
-a[href].header-anchor,
-a[href].header-anchor:visited {
-	color: transparent;
-}
-
-a[href].header-anchor:focus,
-a[href].header-anchor:hover {
-	text-decoration: underline;
-}
-
-a[href].header-anchor:focus,
-:hover>a[href].header-anchor {
-	color: #aaa;
-}
-
-h2+.header-anchor {
-	font-size: 1.5em;
-}
-
 /* Handling images */
-
 .work-post {
 	position: relative;
-	/* Display posts side by side */
 	display: inline-flex;
 	margin: 1em;
+	/* makes it so there's three photos per row */
 	width: calc(29%);
-	/* if you want three images per row. Change this percentage to fit your needs. */
 	overflow: hidden;
-	/* Add overflow hidden to prevent image overflow */
 }
 
 .work-post:first-of-type {
@@ -481,15 +407,13 @@ h2+.header-anchor {
 	display: block;
 	width: 100%;
 	height: 100%;
-	/* fill the entire container, ignoring aspect ratio */
 }
 
-/* You can adjust the percentage to get the aspect ratio you want. */
 .work-post:before {
 	content: "";
 	display: block;
-	padding-top: 100%;
 	/* aspect ratio 4:3, for 1:1 use 100%, for 16:9 use 56.25% */
+	padding-top: 100%;
 }
 
 .work-post p {
@@ -502,9 +426,8 @@ h2+.header-anchor {
 	display: flex;
 	justify-content: center;
 	font-size: 1.5em;
-	/* Semi-transparent black */
-	background: #000000ce;
-	color: white;
+	background: var(--base-black);
+	color: var(--base-white);
 	/* Hide by default */
 	opacity: 0;
 	/* Smooth fade in */
@@ -528,6 +451,11 @@ h2+.header-anchor {
 		margin-bottom: 2rem;
 	}
 
+	.page h1 {
+		display: flex;
+		justify-content: center;
+	}
+
 	.work-post:first-of-type,
 	.work-post:last-of-type {
 		margin-left: auto;
@@ -535,17 +463,43 @@ h2+.header-anchor {
 	}
 }
 
-.section {
+#landing-block,
+#featured-works,
+#recent-blogs {
+	padding: 2rem;
 	margin-bottom: 4em;
 }
 
-.landing-block,
-.featured-works,
-.recent-blogs {
-	padding: 2rem;
-}
-
-.landing-block {
+#landing-block {
 	max-width: 600px;
 	font-size: 14pt;
+}
+
+.page {
+	padding: 2em;
+}
+
+
+.view-more-button {
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: 1em auto;
+	background-color: var(--base-white);
+	text-align: center;
+	border-radius: 25px;
+	border: 1px solid var(--base-grey);
+	text-decoration: none;
+	transition: all 0.5s;
+	cursor: pointer;
+	line-height: 28px;
+	font-size: 16px;
+	color: var(--base-grey);
+}
+
+.view-more-button:hover {
+	background-color: #ebebeb;
+	border-color: #5d656d;
+	border-width: 2px;
+	transition: border-width 0.1s ease-in-out, border-color 0.1s ease-in-out, background-color 0.1s ease-in-out;
 }
