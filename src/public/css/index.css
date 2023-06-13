@@ -7,8 +7,6 @@
 	--base-black: 0, 0, 0;
 	--base-grey: 92, 110, 126;
 
-	--something: rgb(59, 59, 59);
-
 	--syntax-tab-size: 2;
 }
 
@@ -56,13 +54,14 @@ a[href]:active {
 main {
 	max-width: 70em;
 	margin: 0 auto;
-	margin-top: 6.5em;
+	margin-top: 2em;
 }
 
 .links-nextprev {
 	list-style: none;
 	border-top: 1px dashed rgb(var(--base-grey));
 	padding: 1em 0;
+	margin-top: 3em;
 }
 
 table {
@@ -255,7 +254,7 @@ nav {
 	}
 }
 
-/* Posts list */
+/* Main page post list */
 .postlist {
 	list-style: none;
 	padding-left: 0;
@@ -432,7 +431,11 @@ nav {
 }
 
 .work-post p .hover-text {
-	margin-top: 10%;
+	margin-bottom: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
 }
 
 .work-post:hover p {
@@ -472,6 +475,10 @@ nav {
 }
 
 #landing-block {
+	padding-top: 6em;
+}
+
+#landing-block {
 	max-width: 600px;
 	font-size: 14pt;
 }
@@ -498,4 +505,42 @@ nav {
 
 .view-more-button:hover {
 	border-width: 2px;
+}
+
+
+/* Post page formatting */
+
+article {
+	max-width: 700px;
+	margin: auto;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.article-title {
+	font-size: 3rem;
+	margin-bottom: 0;
+}
+
+.post-break {
+	width: 100%;
+	text-align: left;
+	margin-left: 0;
+	margin-bottom: 3em;
+	color: rga(var(--base-grey));
+}
+
+.header-anchor {
+	content: "#";
+	opacity: 0;
+}
+
+.header-anchor:hover {
+	opacity: 1;
+}
+
+article img {
+	display: block;
+	margin: auto;
+	max-width: 100%;
 }
