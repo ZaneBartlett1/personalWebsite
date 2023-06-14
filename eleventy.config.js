@@ -13,7 +13,7 @@ const pluginImages = require("./eleventy.config.images.js");
 module.exports = function (eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
-	eleventyConfig.addPassthroughCopy("src/content/**/*.(jpg|jpeg|png|gif|avif|webp)");
+	eleventyConfig.addPassthroughCopy("src/content/**/*.(jpg|jpeg|png|gif|avif|webp|pdf)");
 	eleventyConfig.addPassthroughCopy("./src/public/**");
 	eleventyConfig.addPassthroughCopy({ "./src/public/img/icon.png": "img/icon.png" });
 
