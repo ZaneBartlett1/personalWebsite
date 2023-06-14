@@ -3,7 +3,150 @@ layout: layouts/base.njk
 eleventyNavigation:
   key: About
   order: 4
+image: /about/image2-2.jpg
+headshot: /about/headshot.png
+resume: /about/resume.pdf
 ---
-<div class="page">
-  <h1>About me</h1>
+<div class="banner-wrapper">
+  <div class="banner-image">
+    <img src="{{ image }}" alt="Black wavy sand">
+  </div>
+
+  <div class="headshot-image">
+    <img src="{{ headshot }}" alt="A headshot of Zane Bartlett">
+  </div>
+</div>
+
+
+<div id="about-page">
+
+  <section id="intro">
+    <h1>About me</h1>
+    <p>
+      Hello! My name is Zane Bartlett and I live in Dallas, Texas. My professional life consists of IT support and software development. In my spare time I enjoy a range of hobbies that includes working on interesting development projects, thinking about philosophy, doing calligraphy, watching TV and movies, volunteering, community building, and enjoying time with my friends. I have a passion for learning, as long as I'm getting to appreciate a complex topic at a deeper level, I'm happy. You can find also find me on <a href="https://github.com/ZaneBartlett1">Github</a> and <a href="https://www.linkedin.com/feed/">LinkedIn</a>
+
+    </p>
+
+    <p>
+      I develop software with a focus on data analytics. I try to always be improving and enjoy finding areas that I can better myself. I build software that's up to industry standard, following current best practices. Over the past few years I have been lucky enough to work with many amazing developers, always doing my best to contibute where I can and learning when I can.
+    </p>
+
+  </section>
+
+
+
+  <section id="technologies">
+    <p>
+      Below you can see the frameworks, languages, libraries, and technologies I'm familiar with. Download my <a href="{{ resume }}" download>resume</a> or go to my <a href="/work/">work page</a> for examples of where I've used these.
+    </p>
+
+
+    <h2>Frameworks, languages, and libraries I'm familiar with</h2>
+    <div class="icon-list">
+      <a href="https://flask.palletsprojects.com/en/2.3.x/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" alt="Flask icon">
+      </a>
+      <a href="https://spring.io/projects/spring-boot">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg" alt="Spring Boot icon">
+      </a>
+      <a href="https://svelte.dev/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" alt="Svelte icon">
+      </a>
+      <a href="https://www.python.org/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python icon">
+      </a>
+      <a href="https://openjdk.org/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/OpenJDK_logo.svg" alt="Java icon">
+      </a>
+      <a href="https://www.gnu.org/software/bash/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" alt="Bash icon">
+      </a>
+      <a href="https://www.javascript.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="Javascript/Typescript icon">
+      </a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML/CSS icon">
+      </a>
+      <a href="https://pandas.pydata.org/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pandas_mark.svg" alt="Pandas icon">
+      </a>
+      <a href="https://plotly.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Plotly-logo.png" alt="Plotly icon">
+      </a>
+      <a href="https://airflow.apache.org/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png" alt="Apache Airflow icon">
+      </a>
+    </div>
+
+    <h2>Technologies I'm Familiar With</h2>
+    <div class="icon-list">
+      <a href="https://www.linux.org/pages/download/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux icon">
+      </a>
+      <a href="https://git-scm.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" alt="Git icon">
+      </a>
+      <a href="https://www.docker.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker icon">
+      </a>
+      <a href="https://www.salesforce.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce icon">
+      </a>
+      <a href="https://www.atlassian.com/software/jira">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Jira_Logo.svg" alt="Jira icon">
+      </a>
+      <a href="https://www.tableau.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau icon">
+      </a>
+      <a href="https://www.postman.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Postman_%28software%29.png" alt="Postman icon">
+      </a>
+      <a href="https://asana.com/?noredirect">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Asana_logo.svg" alt="Asana icon">
+      </a>
+      <a href="https://workspace.google.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Workspace_Logo.svg" alt="Google Workspace icon">
+      </a>
+      <a href="https://www.microsoft365.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg" alt="O306 icon">
+      </a>
+      <a href="https://wordpress.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" alt="Wordpress icon">
+      </a>
+      <a href="https://www.jetbrains.com/idea/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg" alt="Intellij icon">
+      </a>
+      <a href="https://code.visualstudio.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code icon">
+      </a>
+      <a href="https://neovim.io/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg" alt="Neovim icon">
+      </a>
+      <a href="https://github.com/vim/vim">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg" alt="Vim icon">
+      </a>
+      <a href="https://github.com/home">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Font_Awesome_5_brands_github.svg" alt="Github icon">
+      </a>
+      <a href="https://www.postgresql.org/about/">
+        <img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" alt="Postgres icon">
+      </a>
+      <a href="https://www.sqlite.org/index.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg" alt="SQLite icon">
+      </a>
+      <a href="https://aws.amazon.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/AmazonWebservices_Logo.svg" alt="AWS icon">
+      </a>
+    </div>
+  </section>
+
+  
+  
+
+  <section id="this-website">
+    <h2>About the website</h2>
+
+    <p>This website was built responsively using HTML5, CSS, 11ty, and nunjucks, hosted on cloudflare. All photos are sourced either myself, <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>, or <a href="https://www.pexels.com/">Pexels</a>.
+  </section>
+
 </div>

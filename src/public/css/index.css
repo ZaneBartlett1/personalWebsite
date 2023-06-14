@@ -52,9 +52,7 @@ a[href]:active {
 }
 
 main {
-	max-width: 70em;
 	margin: 0 auto;
-	margin-top: 2em;
 }
 
 .links-nextprev {
@@ -136,6 +134,7 @@ header:after {
 	align-items: center;
 	justify-content: space-between;
 	width: 1180px;
+	height: 85px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -462,8 +461,42 @@ nav {
 		margin-right: auto;
 	}
 
-	#featured-works h1 {
+	.page #featured-works h1,
+	.page #recent-blogs {
 		text-align: center;
+		font-size: 4vw;
+	}
+
+	.work-post img {
+		position: relative;
+	}
+
+	.work-post p {
+		/* Adjust to put description under image */
+		position: static;
+		width: 100%;
+		display: block;
+		background: transparent;
+		color: rgb(var(--base-black));
+		/* Always show */
+		opacity: 1;
+		/* Remove smooth fade in */
+		transition: none;
+	}
+
+	.work-post p .hover-text {
+		margin-bottom: 1.25em;
+		display: block;
+		text-align: center;
+		font-size: 2vw;
+	}
+
+	.work-post p {
+		margin-top: .25em;
+	}
+
+	.work-post:before {
+		padding-top: 0%;
 	}
 }
 
@@ -475,7 +508,7 @@ nav {
 }
 
 #landing-block {
-	padding-top: 6em;
+	padding-top: 12%;
 }
 
 #landing-block {
@@ -484,7 +517,11 @@ nav {
 }
 
 .page {
+	display: block;
+	max-width: 70em;
 	padding: 2em;
+	margin-top: 2em;
+	margin: auto;
 }
 
 .view-more-button {
@@ -543,4 +580,96 @@ article img {
 	display: block;
 	margin: auto;
 	max-width: 100%;
+}
+
+.banner-image {
+	position: relative;
+}
+
+.banner-wrapper {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.banner-image img {
+	display: block;
+	width: 100%;
+	max-height: 330px;
+}
+
+.headshot-image {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -35%);
+	width: 10%;
+	min-width: 8rem;
+}
+
+.headshot-image img {
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+#about-page {
+	display: block;
+	padding: 2em;
+	max-width: 75rem;
+	margin-top: 2em;
+	margin: auto;
+}
+
+#about-page p {
+	font-size: 14pt;
+}
+
+#about-page h1 {
+	padding-top: 5rem;
+	padding-bottom: 1em;
+	display: block;
+	font-size: 2.25rem;
+	margin: auto;
+	text-align: center;
+}
+
+#about-page h2 {
+	display: block;
+	text-align: center;
+	padding-top: 3em;
+}
+
+#about-page #intro,
+#about-page #technologies,
+#about-page #this-website {
+	max-width: 45em;
+	margin: auto;
+}
+
+#about-page #technologies img {
+	display: block;
+	max-width: 100%;
+	margin: auto;
+}
+
+.icon-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.icon-list a {
+	/* grow, shrink, base width */
+	flex: 1 0 20%;
+	text-align: center;
+	margin: 10px;
+	height: 100px;
+}
+
+.icon-list img {
+	width: 100%;
+	height: 100%;
+	/* Ensures the aspect ratio is maintained */
+	object-fit: contain;
 }
