@@ -3,17 +3,17 @@ layout: layouts/base.njk
 eleventyNavigation:
   key: About
   order: 4
-image: /about/image2-2.jpg
-headshot: /about/headshot.png
+image: content/about/image.jpg
+headshot: content/about/headshot.png
 resume: /about/resume.pdf
 ---
 <div class="banner-wrapper">
   <div class="banner-image">
-    <img src="{{ image }}" alt="Black wavy sand">
+    {% image image, "Black Wavy Sand", null, null, "eager" %}
   </div>
 
   <div class="headshot-image">
-    <img src="{{ headshot }}" alt="A headshot of Zane Bartlett">
+    {% image headshot, "A headshot of Zane Bartlett in a button up", null, null, "eager" %}
   </div>
 </div>
 
@@ -24,7 +24,6 @@ resume: /about/resume.pdf
     <h1>About me</h1>
     <p>
       Hello! My name is Zane Bartlett and I live in Dallas, Texas. My professional life consists of IT support and software development. In my spare time I enjoy a range of hobbies that includes working on interesting development projects, thinking about philosophy, doing calligraphy, watching TV and movies, volunteering, community building, and enjoying time with my friends. I have a passion for learning, as long as I'm getting to appreciate a complex topic at a deeper level, I'm happy. You can find also find me on <a href="https://github.com/ZaneBartlett1">Github</a> and <a href="https://www.linkedin.com/feed/">LinkedIn</a>
-
     </p>
 
     <p>
@@ -43,37 +42,40 @@ resume: /about/resume.pdf
 
     <h2>Frameworks, languages, and libraries I'm familiar with</h2>
     <div class="icon-list">
-      <a href="https://flask.palletsprojects.com/en/2.3.x/">
+      <a href="https://flask.palletsprojects.com/en/2.3.x/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" alt="Flask icon">
       </a>
-      <a href="https://spring.io/projects/spring-boot">
+      <a href="https://spring.io/projects/spring-boot" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg" alt="Spring Boot icon">
       </a>
-      <a href="https://svelte.dev/">
+      <a href="https://svelte.dev/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" alt="Svelte icon">
       </a>
-      <a href="https://www.python.org/">
+      <a href="https://www.python.org/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python icon">
       </a>
-      <a href="https://openjdk.org/">
+      <a href="https://openjdk.org/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/OpenJDK_logo.svg" alt="Java icon">
       </a>
-      <a href="https://www.gnu.org/software/bash/">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" alt="Bash icon">
-      </a>
-      <a href="https://www.javascript.com/">
+      <a href="https://www.javascript.com/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="Javascript/Typescript icon">
       </a>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML/CSS icon">
       </a>
-      <a href="https://pandas.pydata.org/">
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="HTML/CSS icon">
+      </a>
+      <a href="https://www.gnu.org/software/bash/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" alt="Bash icon">
+      </a>
+      <a href="https://pandas.pydata.org/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pandas_mark.svg" alt="Pandas icon">
       </a>
-      <a href="https://plotly.com/">
+      <a href="https://plotly.com/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Plotly-logo.png" alt="Plotly icon">
       </a>
-      <a href="https://airflow.apache.org/">
+      <a href="https://airflow.apache.org/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png" alt="Apache Airflow icon">
       </a>
     </div>

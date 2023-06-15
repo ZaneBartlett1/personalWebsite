@@ -32,22 +32,22 @@
 		<style>{% getBundle "css" %}</style>
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
-		<link rel="icon" href="/img/icon.png" type="image/x-icon">
+		<link rel="icon" href="/img/icon.svg" type="image/x-icon">
 	</head>
 	<body>
 		<header>
 			<div class="header-container">
 				<a href="/" class="home-link">{{ metadata.title }}</a>
 
-				<input type="checkbox" id="hamburger-checkbox" class="hamburger-checkbox">
-				<label for="hamburger-checkbox" class="hamburger">
-					<div></div>
-					<div></div>
-					<div></div>
+				<input type="checkbox" id="hamburger-checkbox" class="hamburger-checkbox" aria-label="Menu toggle" aria-expanded="false">
+				<label for="hamburger-checkbox" class="hamburger" aria-hidden="true">
+					<div aria-hidden="true"></div>
+					<div aria-hidden="true"></div>
+					<div aria-hidden="true"></div>
 				</label>
 
 				<label for="hamburger-checkbox" class="hamburger-menu-label">
-					<nav>
+					<nav aria-label="Main navigation">
 						<ul>
 							{%- for entry in collections.all | eleventyNavigation %}
 								<li class="nav-item">
@@ -66,5 +66,20 @@
 		<main>
 			{{ content | safe }}
 		</main>
+
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+		const checkbox = document.getElementById('hamburger-checkbox');
+
+		checkbox.addEventListener('change', function() {
+		if(this.checked) {
+			this.setAttribute('aria-expanded', 'true');
+		} else {
+			this.setAttribute('aria-expanded', 'false');
+		}
+		});
+	});
+	</script>
+
 	</body>
 </html>
