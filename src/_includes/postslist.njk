@@ -3,7 +3,7 @@
 	<li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
 		<a href="{{ post.url }}" class="postlist-link">
             {% if post.data.title %}
-                <h4>{{ post.data.title }}</h4>
+                <h2>{{ post.data.title }}</h2>
             {% else %}
                 <code>{{ post.url }}</code>
             {% endif %}

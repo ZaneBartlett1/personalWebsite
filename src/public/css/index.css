@@ -32,6 +32,10 @@ html {
 	overflow-y: scroll;
 }
 
+code {
+	background-color: #d8d8d8
+}
+
 p {
 	line-height: 1.5;
 }
@@ -202,7 +206,7 @@ nav {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 }
 
 .hamburger-checkbox:checked~.hamburger-menu-label nav {
@@ -267,9 +271,10 @@ nav {
 	border-bottom: solid 1px rgb(var(--base-grey));
 }
 
-.postlist-item h4 {
+.postlist-item h2 {
 	display: inline;
 	font-weight: 400;
+	font-size: 1.25rem;
 }
 
 .postlist-item a {
@@ -281,7 +286,7 @@ nav {
 }
 
 .postlist-item:hover .postlist-date,
-.postlist-item:hover h4 {
+.postlist-item:hover h2 {
 	font-weight: 800;
 }
 
@@ -328,7 +333,7 @@ nav {
 		text-align: center;
 	}
 
-	.postlist-item h4 {
+	.postlist-item h2 {
 		text-align: center;
 		margin: 0;
 	}
@@ -383,16 +388,8 @@ nav {
 	display: inline-flex;
 	margin: 1em;
 	/* makes it so there's three photos per row */
-	width: calc(34.111% - 2em);
+	width: calc((100% / 3) - 3em);
 	overflow: hidden;
-}
-
-.work-post:first-of-type {
-	margin-left: 0;
-}
-
-.work-post:last-of-type {
-	margin-right: 0;
 }
 
 .work-post img {
@@ -444,7 +441,7 @@ nav {
 
 @media screen and (max-width: 768px) {
 	.work-post {
-		width: 75%;
+		width: 85%;
 		display: block;
 		margin: auto;
 		margin-bottom: 2rem;
@@ -464,7 +461,7 @@ nav {
 	.page #featured-works h1,
 	.page #recent-blogs {
 		text-align: center;
-		font-size: 4vw;
+		font-size: 6vw;
 	}
 
 	.work-post img {
@@ -488,7 +485,7 @@ nav {
 		margin-bottom: 1.25em;
 		display: block;
 		text-align: center;
-		font-size: 2vw;
+		font-size: 3vw;
 	}
 
 	.work-post p {
@@ -504,7 +501,7 @@ nav {
 #featured-works,
 #recent-blogs {
 	padding: 2rem;
-	margin-bottom: 4em;
+	margin-bottom: 7%;
 }
 
 #landing-block {
@@ -609,6 +606,7 @@ article img {
 
 .headshot-image img {
 	width: 100%;
+	height: auto;
 	display: block;
 	margin: auto;
 }

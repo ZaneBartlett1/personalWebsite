@@ -6,10 +6,10 @@ eleventyNavigation:
 ---
 <div class="page">
   <h1>All Work</h1>
-  {% for post in collections.work %}
+  {% for post in collections.work | reverse %}
     <div class="work-post">
       <a href="{{ post.url }}">
-        <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+        {% image post.data.image, post.data.alt %}
         <p><span class="hover-text">{{ post.data.title }}</span></p>
       </a>
     </div>

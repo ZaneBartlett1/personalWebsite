@@ -24,7 +24,7 @@ numberOfLatestPostsToShow: 3
     {% for post in collections.pinned %}
       <div class="work-post">
         <a href="{{ post.url }}">
-          <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+          {% image post.data.image, post.data.alt %}
           <p><span class="hover-text">{{ post.data.title }}</span></p>
         </a>
       </div>
