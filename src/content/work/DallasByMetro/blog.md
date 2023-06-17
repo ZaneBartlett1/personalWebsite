@@ -27,6 +27,6 @@ In my pursuit of high-quality software, I've established a Continuous Integratio
 
 To host our application, I've chosen the scalability and convenience of Amazon Web Services (AWS). My use of AWS services extends to deploying and managing our virtual server instances with EC2, managing our Postgres database with RDS, and setting up VPC configurations for network isolation and security. Additional measures include AWS Security Groups for controlling traffic, Route 53 for DNS management, and Certificate Manager for SSL/TLS certificate management.
 
-Lastly, but importantly, I've contributed to the design and implementation of the project's API. By establishing clear communication endpoints and coordinating seamless interaction between the backend and frontend, I've ensured a smooth and user-friendly experience for our application users.
+Lastly, but importantly, I've contributed to the design and implementation of the project's API. Using RESTful architecture, establishing clear communication endpoints, and coordinating seamless interaction between the backend and frontend, I've ensured a smooth and user-friendly experience for our application users.
 
 Throughout the project, my team and I have adhered to industry best practices, fostered clear communication, and upheld an agile approach, enabling us to consistently move toward our objectives. As a result, we've created a professional and polished web application backend, a testament to our collective skills and abilities.
