@@ -59,6 +59,14 @@ main {
 	margin: 0 auto;
 }
 
+.page {
+	display: block;
+	max-width: 70em;
+	padding: 2em;
+	margin-top: 2em;
+	margin: auto;
+}
+
 .links-nextprev {
 	list-style: none;
 	border-top: 1px dashed rgb(var(--base-grey));
@@ -143,12 +151,6 @@ header:after {
 	margin-left: auto;
 }
 
-nav {
-	display: block;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-
 .nav-item {
 	font-size: 1.25em;
 	display: inline-flex;
@@ -168,7 +170,6 @@ nav {
 	display: inline-block;
 	padding: 5px 15px;
 	text-decoration: none;
-	color: rgb(var(--base-white));
 	border-radius: 0;
 	border: 2px solid;
 	box-shadow: 6px 6px 0px rgb(var(--base-black));
@@ -458,9 +459,15 @@ nav {
 	}
 
 	.page #featured-works h1,
-	.page #recent-blogs {
+	.page #recent-blogs h1 {
 		text-align: center;
-		font-size: 6vw;
+		font-size: 20pt;
+	}
+
+	.page #featured-works,
+	.page #landing-block,
+	.page #recent-blogs {
+		padding: 0;
 	}
 
 	.work-post img {
@@ -484,7 +491,7 @@ nav {
 		margin-bottom: 1.25em;
 		display: block;
 		text-align: center;
-		font-size: 3vw;
+		font-size: 16pt;
 	}
 
 	.work-post p {
@@ -512,12 +519,8 @@ nav {
 	font-size: 14pt;
 }
 
-.page {
-	display: block;
-	max-width: 70em;
-	padding: 2em;
-	margin-top: 2em;
-	margin: auto;
+#landing-block h1 {
+	font-size: 20pt;
 }
 
 .view-more-button {
