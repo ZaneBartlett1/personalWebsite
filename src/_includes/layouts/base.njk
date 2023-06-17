@@ -36,30 +36,27 @@
 	</head>
 	<body>
 		<header>
-			<div class="header-container">
+			<div id="header-container">
 				<a href="/" class="home-link">{{ metadata.title }}</a>
 
-				<input type="checkbox" id="hamburger-checkbox" class="hamburger-checkbox" aria-label="Menu toggle" aria-expanded="false">
-				<label for="hamburger-checkbox" class="hamburger" aria-hidden="true">
+				<button id="hamburger-button" aria-label="navigation-menu-toggle" aria-expanded="false">
 					<div aria-hidden="true"></div>
 					<div aria-hidden="true"></div>
 					<div aria-hidden="true"></div>
-				</label>
+				</button>
 
-				<label for="hamburger-checkbox" class="hamburger-menu-label">
-					<nav aria-label="Main navigation">
-						<ul>
-							{%- for entry in collections.all | eleventyNavigation %}
-								<li class="nav-item">
-									<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
-								</li>
-							{%- endfor %}
+				<nav id="navigation-menu" aria-label="navigation-menu">
+					<ul>
+						{%- for entry in collections.all | eleventyNavigation %}
 							<li class="nav-item">
-								<a href="mailto:zanebartlet1@gmail.com" class="hire-me">Hire Me</a>
+								<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
 							</li>
-						</ul>
-					</nav>
-				</label>
+						{%- endfor %}
+						<li class="nav-item">
+							<a href="mailto:zanebartlet1@gmail.com" id="hire-me">Hire Me</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 
@@ -67,19 +64,39 @@
 			{{ content | safe }}
 		</main>
 
-	<script>
-		window.addEventListener('DOMContentLoaded', (event) => {
-		const checkbox = document.getElementById('hamburger-checkbox');
+		<script>
+			window.addEventListener('DOMContentLoaded', (event) => {
+				const button = document.getElementById('hamburger-button');
+				const nav = document.getElementById('navigation-menu');
+				const mediaQuery = window.matchMedia('(max-width: 768px)');
 
-		checkbox.addEventListener('change', function() {
-		if(this.checked) {
-			this.setAttribute('aria-expanded', 'true');
-		} else {
-			this.setAttribute('aria-expanded', 'false');
-		}
-		});
-	});
-	</script>
+				function checkMediaQuery() {
+					if (mediaQuery.matches) {
+						button.setAttribute('aria-hidden', false);
+						nav.setAttribute('aria-hidden', true);
+					} else {
+						button.setAttribute('aria-hidden', true);
+						nav.setAttribute('aria-hidden', false);
+					}
+				}
 
+				checkMediaQuery();
+
+				button.addEventListener('click', function() {
+					let expanded = false;
+					this.setAttribute('aria-expanded', true);
+					nav.setAttribute('aria-hidden', false);
+				});
+
+				window.addEventListener('click', function(event) {
+					if (!button.contains(event.target)) {
+						button.setAttribute('aria-expanded', false);
+						nav.setAttribute('aria-hidden', true);
+					}
+				});
+
+				window.addEventListener('resize', checkMediaQuery);
+			});
+		</script>
 	</body>
 </html>

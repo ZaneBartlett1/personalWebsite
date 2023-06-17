@@ -131,7 +131,7 @@ header:after {
 }
 
 /* Nav */
-.header-container {
+#header-container {
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
@@ -144,7 +144,7 @@ header:after {
 }
 
 nav {
-	display: flex;
+	display: block;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
@@ -164,7 +164,7 @@ nav {
 	text-decoration: underline;
 }
 
-.hire-me {
+#hire-me {
 	display: inline-block;
 	padding: 5px 15px;
 	text-decoration: none;
@@ -175,71 +175,71 @@ nav {
 	transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
 }
 
-.hire-me:hover {
+#hire-me:hover {
 	box-shadow: 0px 0px 0px rgb(var(--base-black));
 	transform: translate(6px, 6px);
 }
 
 /* Hamburger menu styles */
-.hamburger {
-	display: none;
-	flex-direction: column;
-	justify-content: space-around;
+#hamburger-button {
 	width: 2rem;
 	height: 2rem;
+	background: transparent;
+	border: none;
+	display: none;
 	cursor: pointer;
 	z-index: 10;
 }
 
-.hamburger div {
+#hamburger-button div {
 	width: 2rem;
 	height: 0.25rem;
-	background-color: rgb(var(--base-black));
+	background: transparent;
+	border: none;
 	transition: all 0.3s linear;
 	position: relative;
 	transform-origin: 1px;
 }
 
-.hamburger-checkbox {
-	/* Hide the checkbox */
-	position: absolute;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
-}
-
-.hamburger-checkbox:checked~.hamburger-menu-label nav {
+#navigation-menu {
+	/* Hide the menu */
 	display: block;
 }
 
 @media screen and (max-width: 768px) {
-	.nav-item {
+
+	#navigation-menu {
 		display: none;
-	}
-
-	.hamburger {
-		display: flex;
-		margin: 1.37rem;
-		margin-left: auto;
-	}
-
-	.hamburger-menu-label nav {
 		position: fixed;
-		display: none;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
 		background-color: rgba(var(--base-black), 0.8);
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
 		transition: transform 0.3s ease-in-out;
 		z-index: 999;
 	}
 
-	.hamburger-checkbox:checked~.hamburger-menu-label .nav-item {
+	#navigation-menu[aria-hidden="true"] {
+		display: none;
+	}
+
+	#navigation-menu[aria-hidden="false"] {
+		display: block;
+	}
+
+	#hamburger-button {
+		display: block;
+		margin: 1.37rem;
+		margin-left: auto;
+	}
+
+	#hamburger-button div {
+		margin: 6px 0;
+		background-color: rgb(var(--base-black));
+	}
+
+	#hamburger-button~#navigation-menu .nav-item {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -247,12 +247,11 @@ nav {
 		margin-right: 0;
 	}
 
-	.hamburger-checkbox:checked~.hamburger-menu-label ul {
+	#hamburger-button~#navigation-menu ul {
 		padding: 0;
-		list-style-type: none;
 	}
 
-	.hamburger-checkbox:checked~.hamburger-menu-label .nav-item a {
+	#hamburger-button~#navigation-menu .nav-item a {
 		color: rgb(var(--base-white));
 	}
 }
