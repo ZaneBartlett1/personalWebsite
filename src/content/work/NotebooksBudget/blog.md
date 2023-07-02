@@ -12,7 +12,7 @@ alt: "a screenshot from the application showing a produced graph from a notebook
 <embed type="markdown" src="https://raw.githubusercontent.com/ZaneBartlett1/NotebooksBudget/main/README.md">
 
 
-Read on [github](https://github.com/ZaneBartlett1/NotebooksBudget)
+Read on [GitHub](https://github.com/ZaneBartlett1/NotebooksBudget)
 
 <details>
   <summary>Table of Contents</summary>
@@ -135,8 +135,8 @@ Generally the workflows are what you'd be using. There are three workflows at th
 * Then there is "Periodic Check-in" that works when once you've set up a budget in the "budget_plans.yml" file. This gives a lot of good information based on the salary you set in the init cell.
 
 ## Some Notes
-* I have the most essential and useful functions broken out into a section in the notebook called "Meaningful Function Definitions", each in there own cell with a ?, so if you need to look at what it does, just run the cell. You can run it with two ?? to get the source function if you need.
-* This app will be most comfortable for extending if you're familiar with Regex, SQLAlchemy, Pandas, Jupyterlab, dictionaries, and Plotly. Otherwise doing the basics should still work, but trying to do more than that might hit a wall pretty quickly.
+* I have the most essential and useful functions broken out into a section in the notebook called "Meaningful Function Definitions", each in their own cell with a ?, so if you need to look at what it does, just run the cell. You can run it with two ?? to get the source function if you need.
+* This app will be most comfortable for extending if you're familiar with Regex, SQLAlchemy, Pandas, Jupyterlab, dictionaries, and Plotly. Otherwise, doing the basics should still work, but trying to do more than that might hit a wall pretty quickly.
 * I do intend to use this as my budgeting application so hopefully this will continue to be developed!
 * This *does not* work well for tracking across multiple accounts. Again, the idea is to track a budget over the course of a month or quarter, not how that saved across multiple accounts and how those accounts are growing. If this is too simple, consider checking out GNUCash!
 * I used the [black formatter](https://pypi.org/project/black/)

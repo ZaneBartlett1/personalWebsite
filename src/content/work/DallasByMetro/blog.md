@@ -8,7 +8,6 @@ image: content/work/DallasByMetro/image.png
 alt: "A DART train at a station"
 ---
 
-[comment]: # (feature image)
 <div class="image-container">
   {% image image, alt %}
 </div>

@@ -10,7 +10,7 @@ alt: "test"
   {% image image, alt %}
 </div>
 
-Read on [github](https://github.com/ZaneBartlett1/nvim)
+Read on [GitHub](https://github.com/ZaneBartlett1/nvim)
 
 ## Notes
 
@@ -50,7 +50,7 @@ sudo apt install libfuse2```
 6. Get coc-pyright set up
     * For python - With neovim open, run ```:CocInstall coc-pyright```
     * [Full guide](https://github.com/fannheyward/coc-pyright)
-7. Assuming you're using [nvim appimage](https://github.com/neovim/neovim/releases) and it's in ```~/.local/share/applications/```, here's a couple nice bash aliases. With this you can run nvim with "v". Then with "V", you can run nvim, open your file explorer, and terminal all at once. Add the below to your .bashrc. If you're unfamiliar with .bashrc read more [here](https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux), but it's just the bash configuration file, like how the init.lua file is the nvim configuration file to nvim.
+7. Assuming you're using [nvim appimage,](https://github.com/neovim/neovim/releases) and it's in ```~/.local/share/applications/```, here's a couple nice bash aliases. With this you can run nvim with "v". Then with "V", you can run nvim, open your file explorer, and terminal all at once. Add the below to your .bashrc. If you're unfamiliar with .bashrc read more [here](https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux), but it's just the bash configuration file, like how the init.lua file is the nvim configuration file to nvim.
 ```
 alias v='~/.local/share/applications/nvim.appimage'
 alias V='~/.local/share/applications/nvim.appimage -c ":Lexplore|wincmd l|10split|terminal"'

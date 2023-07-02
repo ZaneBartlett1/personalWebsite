@@ -12,7 +12,7 @@ alt: "A picture of a hand tally machine"
 
 # Count-on-it
 
-Read on [github](https://github.com/ZaneBartlett1/Count-on-it)
+Read on [GitHub](https://github.com/ZaneBartlett1/Count-on-it)
 
 <details>
   <summary>Table of Contents</summary>
@@ -69,7 +69,7 @@ Example of what a finished product would look like
 #### Counter table
 
 
-* Going to do it all on one table. This helps alleviate the entire issue by making column names match between tables for counters so that the tables. Instead in the view I'll allow users to save the name as an alias. So you'd have a generic name column for your books, movies, shows, etc, but then when you're viewing it under a view called something like "anime", the name will appear as "Anime name" or something instead. Nothing is saved if it's not saved to a view.
+* Going to do it all on one table. This helps alleviate the entire issue by making column names match between tables for counters so that the tables. Instead, in the view I'll allow users to save the name as an alias. So you'd have a generic name column for your books, movies, shows, etc, but then when you're viewing it under a view called something like "anime", the name will appear as "Anime name" or something instead. Nothing is saved if it's not saved to a view.
 
 
 #### Log table
@@ -102,8 +102,8 @@ Basic example -
 
 
 * Drop down to say if you want to look at the counters, logs, or both
-* Filters, let's you do basic filters on a row based on a column like "less than x"
-* Columns, let's you select which columns to view
+* Filters, lets you do basic filters on a row based on a column like "less than x"
+* Columns, lets you select which columns to view
 * Export, exports to csv
 * Sort, as basic as filtering
 * SQL, for the advanced
@@ -120,7 +120,7 @@ Basic example -
 
 
 
-### Side bar
+### Sidebar
 
 
 * "Views" which is just saved views
