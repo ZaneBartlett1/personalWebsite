@@ -1,6 +1,6 @@
 ---
 title: Syncing data between devices
-date: 2023-01-19T00:00:03
+date: 2023-01-19T00:00:02
 tags:
     - digital living
 ---
