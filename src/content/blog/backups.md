@@ -1,7 +1,7 @@
 ---
 title: How I handle backups
 description: This is a post on how I've set up my 3-2-1 backup system.
-date: 2023-01-19T00:00:12
+date: 2023-01-19T00:00:11
 tags:
     - digital living
 ---
