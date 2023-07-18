@@ -20,4 +20,4 @@ Then, I like to think that I am good at being reasonable at addressing most of t
 * At a large scale I benefit, the more people that are comfortable with technologies like a password manager, the more we can assume sane functions on the internet. This is something that a lot of people may not think about, but anyone who has worked in IT knows what I’m talking about.
 * I like to list things out and see if there’s room for improvement. Please, let me know if there’s something here that you think the vast majority of people do on the internet that I missed!
 
-Read all the articles by going following the tag link at the top or click [here](http://localhost:8080/tags/digital-living/)
+Read all the articles by going following the tag link at the top or click [here](https://zanebartlett.com/tags/digital-living/)
