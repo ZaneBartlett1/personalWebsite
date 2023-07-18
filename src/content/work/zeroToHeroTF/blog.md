@@ -6,14 +6,13 @@ image: https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg
 alt: "A picture of the Tensorflow logo"
 ---
 
-[comment]: # (feature image)
 <div class="image-container">
   {% image image, alt %}
 </div>
 
 [Source code](https://github.com/ZaneBartlett1/Zero-to-Hero-TF)
 
-I recently went through a tutorial on youtube hosted by TensorFlow, a renowned open-source framework for deep learning, called the "TensorFlow Zero to Hero". This comprehensive tutorial offered a hands-on journey through the multiple facets and capabilities of TensorFlow.
+I recently went through a tutorial on YouTube hosted by TensorFlow, a renowned open-source framework for deep learning, called the "TensorFlow Zero to Hero". This comprehensive tutorial offered a hands-on journey through the multiple facets and capabilities of TensorFlow.
 
 Starting with foundational concepts such as tensors, operations, and computation graphs, the tutorial unraveled the principles of TensorFlow. It presented the opportunity to create and manipulate tensors, the essential units of data in TensorFlow, and perform mathematical computations using them.
 

@@ -10,7 +10,7 @@ alt: "test"
   {% image image, alt %}
 </div>
 
-Read on [github](https://github.com/ZaneBartlett1/nvim)
+Read on [GitHub](https://github.com/ZaneBartlett1/nvim)
 
 ## Notes
 
@@ -24,8 +24,8 @@ Read on [github](https://github.com/ZaneBartlett1/nvim)
    * Syntax highlighting (native)
    * Cleaned up netrw (native)
    * Check out [```lua/keys.lua```](https://github.com/ZaneBartlett1/nvim/blob/main/lua/keys.lua) for any preset keymappings. Mostly setting better buffer and window navigation. 
-   * Very Lua inspired. All of my personal configuration is in Lua, and besides Coc and Black for fairly obvious reasons, all pluggins are written almost completely in Lua.
- * If you're looking for something more, I reccomend checking out -
+   * Very Lua inspired. All of my personal configuration is in Lua, and besides Coc and Black for fairly obvious reasons, all plugins are written almost completely in Lua.
+ * If you're looking for something more, I recommend checking out -
     * A more complete, but still "basic" [IDE](https://github.com/LunarVim/nvim-basic-ide)
     * Closest to a full [IDE](https://github.com/LunarVim/LunarVim)
 * Check Issues for what I'd like to improve and known bugs. My preference for reporting issues would be [Issues](https://github.com/ZaneBartlett1/nvim/issues). For questions, ideas, etc I would prefer [Discussions](https://github.com/ZaneBartlett1/nvim/discussions).
@@ -33,15 +33,15 @@ Read on [github](https://github.com/ZaneBartlett1/nvim)
 
 ## Setting up
 
-1. Install [neovim](https://github.com/neovim/neovim/releases/tag/stable) if you haven't already. I reccommend the appimage, makes updating really easy.
+1. Install [neovim](https://github.com/neovim/neovim/releases/tag/stable) if you haven't already. I recommend the appimage, makes updating really easy.
     * You may need to run ```sudo add-apt-repository universe
 sudo apt install libfuse2```
 2. Clone repo into ```~/.config```
-3. Get a Patch Font from NerdFonts set up, this is for the barbar pluggin as it uses icons in it's tabs.
-    * You can watch the video below for more detailed instructions, but a a quick walkthrough here -
-      * A patch font is basically a wide varity of glyphs all set to a certain font. If you're not picky download "Hack Nerd Font" [here](https://www.nerdfonts.com/font-downloads). It's a popular and what I used. NOTE: There is a way to install a smaller file [here](https://github.com/ryanoasis/nerd-fonts#patched-fonts), but I could NOT get this to work following the instructions. If you'd like the file to be smaller and more specific, try that.
-      * Unzip the file and move it to a spot your system can see it. For Ubuntu, you can make a directory called "fonts" under ```~/.local/share```, so ```mkdir ~/.local/share/fonts```, and put the unziped folder there.
-      * Set your terminal to use the custom font. For the GNOME terminal I found it under prefrences/profiles/text. Select "custom font" and choose whatever patch font you downloaded. You may need to restart your terminal to find it if you had it open while you moved the unziped folder.
+3. Get a Patch Font from NerdFonts set up, this is for the barbar plugin as it uses icons in its tabs.
+    * You can watch the video below for more detailed instructions, but a quick walkthrough here -
+      * A patch font is basically a wide variety of glyphs all set to a certain font. If you're not picky download "Hack Nerd Font" [here](https://www.nerdfonts.com/font-downloads). It's a popular and what I used. NOTE: There is a way to install a smaller file [here](https://github.com/ryanoasis/nerd-fonts#patched-fonts), but I could NOT get this to work following the instructions. If you'd like the file to be smaller and more specific, try that.
+      * Unzip the file and move it to a spot your system can see it. For Ubuntu, you can make a directory called "fonts" under ```~/.local/share```, so ```mkdir ~/.local/share/fonts```, and put the unzipped folder there.
+      * Set your terminal to use the custom font. For the GNOME terminal I found it under preferences/profiles/text. Select "custom font" and choose whatever patch font you downloaded. You may need to restart your terminal to find it if you had it open while you moved the unzipped folder.
     * [This video was what I used](https://www.youtube.com/watch?v=fR4ThXzhQYI)
 4. Get Black set up
     * Should just be ```pip install black```
@@ -50,7 +50,7 @@ sudo apt install libfuse2```
 6. Get coc-pyright set up
     * For python - With neovim open, run ```:CocInstall coc-pyright```
     * [Full guide](https://github.com/fannheyward/coc-pyright)
-7. Assuming you're using [nvim appimage](https://github.com/neovim/neovim/releases) and it's in ```~/.local/share/applications/```, here's a couple nice bash aliases. With this you can run nvim with "v". Then with "V", you can run nvim, open your file explorer, and terminal all at once. Add the below to your .bashrc. If you're unfamiliar with .bashrc read more [here](https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux), but it's just the bash configuration file, like how the init.lua file is the nvim configuation file to nvim.
+7. Assuming you're using [nvim appimage,](https://github.com/neovim/neovim/releases) and it's in ```~/.local/share/applications/```, here's a couple nice bash aliases. With this you can run nvim with "v". Then with "V", you can run nvim, open your file explorer, and terminal all at once. Add the below to your .bashrc. If you're unfamiliar with .bashrc read more [here](https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux), but it's just the bash configuration file, like how the init.lua file is the nvim configuration file to nvim.
 ```
 alias v='~/.local/share/applications/nvim.appimage'
 alias V='~/.local/share/applications/nvim.appimage -c ":Lexplore|wincmd l|10split|terminal"'
