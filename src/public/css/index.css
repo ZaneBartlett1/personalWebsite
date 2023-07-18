@@ -613,7 +613,7 @@ article img {
 	margin: auto;
 }
 
-#about-page {
+.page-center {
 	display: block;
 	padding: 2em;
 	max-width: 75rem;
@@ -621,11 +621,11 @@ article img {
 	margin: auto;
 }
 
-#about-page p {
+.page-center p {
 	font-size: 14pt;
 }
 
-#about-page h1 {
+.page-center h1 {
 	padding-top: 5rem;
 	padding-bottom: 1em;
 	display: block;
@@ -634,20 +634,30 @@ article img {
 	text-align: center;
 }
 
-#about-page h2 {
+.page-center h2 {
 	display: block;
 	text-align: center;
 	padding-top: 3em;
 }
 
-#about-page #intro,
-#about-page #technologies,
-#about-page #this-website {
+.page-center ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.list-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.page-center #intro,
+.page-center #technologies,
+.page-center #this-website {
 	max-width: 45em;
 	margin: auto;
 }
 
-#about-page #technologies img {
+.page-center #technologies img {
 	display: block;
 	max-width: 100%;
 	margin: auto;
