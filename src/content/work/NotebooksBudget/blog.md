@@ -54,7 +54,7 @@ This is a good medium between using something a spreadsheet tool like google she
 ### Generate fake data to test
 
 <video width=100% controls>
-  <source src="https://github.com/ZaneBartlett1/NotebooksBudget/assets/85081861/8339dd0a-6988-49f7-9917-dd4a6fb50248" type="video/webm">
+  <source src="/work/NotebooksBudget/GeneratingFakeData.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
 
