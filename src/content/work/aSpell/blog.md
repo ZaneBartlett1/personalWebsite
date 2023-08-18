@@ -13,7 +13,7 @@ alt: "A picture of a terminal with suggestions"
 <br>
 
 <video width=100% controls>
-  <source src="src/content/work/aSpell/Screencast from 08-17-2023 08:52:46 PM.webm" type="video/webm">
+  <source src="/work/aSpell/Screencast_from_08-17-2023_08-52-46_PM.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
 
