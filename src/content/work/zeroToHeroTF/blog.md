@@ -10,7 +10,7 @@ alt: "A picture of the Tensorflow logo"
   {% image image, alt %}
 </div>
 
-[Source code](https://github.com/ZaneBartlett1/Zero-to-Hero-TF)
+<a href="https://github.com/ZaneBartlett1/Zero-to-Hero-TF" target="_blank">Source Code</a>
 
 I recently went through a tutorial on YouTube hosted by TensorFlow, a renowned open-source framework for deep learning, called the "TensorFlow Zero to Hero". This comprehensive tutorial offered a hands-on journey through the multiple facets and capabilities of TensorFlow.
 

@@ -10,7 +10,7 @@ alt: "test"
   {% image image, alt %}
 </div>
 
-Read on [GitHub](https://github.com/ZaneBartlett1/nvim)
+Read on <a href="https://github.com/ZaneBartlett1/nvim" target="_blank">GitHub</a>
 
 ## Notes
 

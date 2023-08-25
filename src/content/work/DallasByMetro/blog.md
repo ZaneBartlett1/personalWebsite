@@ -12,7 +12,9 @@ alt: "A DART train at a station"
   {% image image, alt %}
 </div>
 
-[Source code](https://github.com/DartExplore/dallas-by-metro-backend)
+<a href="https://dallasbymetro.com/planner" target="_blank">Website</a>
+
+<a href="https://github.com/DartExplore/dallas-by-metro-backend" target="_blank">Source code</a>
 
 This website emerges from a group endeavor: a collaborative portfolio project with my talented colleagues. Our shared goal is to aid public transit riders by enabling them to find easily accessible destinations through an intelligent filtering system. Our choice of technologies includes React, Java Spring Boot, and Postgres.
 

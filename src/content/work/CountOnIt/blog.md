@@ -12,7 +12,7 @@ alt: "A picture of a hand tally machine"
 
 # Count-on-it
 
-Read on [GitHub](https://github.com/ZaneBartlett1/Count-on-it)
+Read on <a href="https://github.com/ZaneBartlett1/Count-on-it" target="_blank">GitHub</a>
 
 <details>
   <summary>Table of Contents</summary>

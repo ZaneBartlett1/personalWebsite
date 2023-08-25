@@ -8,7 +8,7 @@ tags:
 alt: "Screenshot from the about page on 'about this website'"
 ---
 
-[Source code](https://github.com/ZaneBartlett1/personalWebsite)
+<a href="https://github.com/ZaneBartlett1/personalWebsite" target="_blank">Source Code</a>
 
 Welcome to my website! A show of my technical skills, I single-handedly developed it using an array of web technologies, including HTML5, CSS, 11ty, Nunjucks, and JavaScript to address any accessibility needs. I'm pleased to say it achieves a perfect Lighthouse score of 400, demonstrating excellent performance, accessibility, best practices, and SEO measures.
 

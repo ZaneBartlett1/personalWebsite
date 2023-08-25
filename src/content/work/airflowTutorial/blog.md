@@ -10,7 +10,7 @@ alt: "A picture of the airflow logo"
   {% image image, alt %}
 </div>
 
-[Source Code](https://github.com/ZaneBartlett1/airflowTutorial)
+<a href="https://github.com/ZaneBartlett1/airflowTutorial" target="_blank">Source Code</a>
 
 As part of my ongoing exploration of data workflow tools, I recently worked through the comprehensive Apache Airflow tutorial. Apache Airflow is an open-source platform designed for scheduling and orchestrating complex data workflows. Walking through this tutorial allowed me to gain practical, hands-on experience with Airflow's central concepts and functionalities, enhancing my ability to manage and monitor intricate data pipelines.
 

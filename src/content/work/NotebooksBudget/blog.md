@@ -11,8 +11,7 @@ alt: "a screenshot from the application showing a produced graph from a notebook
 
 <embed type="markdown" src="https://raw.githubusercontent.com/ZaneBartlett1/NotebooksBudget/main/README.md">
 
-
-Read on [GitHub](https://github.com/ZaneBartlett1/NotebooksBudget)
+Read on <a href="https://github.com/ZaneBartlett1/NotebooksBudget" target="_blank">GitHub</a>
 
 <details>
   <summary>Table of Contents</summary>

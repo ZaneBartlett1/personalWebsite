@@ -10,9 +10,9 @@ alt: "A Screenshot of AYOIAM"
   {% image image, alt %}
 </div>
 
-[Website](https://ayoiam.com/)
+<a href="https://ayoiam.com/" target="_blank">Website</a>
 
-[Source Code](https://github.com/ZaneBartlett1/whatAreTheOdds)
+<a href="https://github.com/ZaneBartlett1/whatAreTheOdds" target="_blank">Source Code</a>
 
 As a software engineer captivated by the potential of data, I embarked on a project to create "Are you one in a million?" - an interactive application that merges programming and data analysis. The journey was not just about writing code, but about molding diverse data sources into a form that provides meaningful insights.
 
