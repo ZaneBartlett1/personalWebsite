@@ -1,5 +1,5 @@
 ---
-title: How I manage 2FA for my PWM
+title: 2FA for my PWM
 date: 2023-01-19T00:00:09
 tags:
     - digital living

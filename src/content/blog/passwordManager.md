@@ -1,5 +1,5 @@
 ---
-title: How I manage my passwords
+title: Passwords
 date: 2023-01-19T00:00:08
 tags:
     - digital living
