@@ -1,5 +1,5 @@
 ---
-title: How I handle backups
+title: Backups
 description: This is a post on how I've set up my 3-2-1 backup system.
 date: 2023-01-19T00:00:11
 tags:
@@ -24,7 +24,7 @@ I implement a full [3-2-1 backup](https://www.veeam.com/blog/321-backup-rule.htm
 
 # Backup 1
 
-I use my personal desktop as the first place there’s a full backup for anything I care about. This way my first layer of backups I just worry about having enough storage on my computer.
+I use my personal desktop as the first place there’s a full backup for anything I care about. This way my first layer of backups I just worry about having enough storage on my computer. I use Syncthing as mentioned above to get anything from any device synced to my computer.
 
 </br>
 
@@ -50,7 +50,7 @@ Then I have a cloud storage system. I use Pcloud, but really most will work as l
 
 ## Backups are only as valid as their ability to be restored
 
-Then, every six months I’ll restore from my cloud backup to a fourth external hard drive. I installed [VeraCrypt](https://www.veracrypt.fr/code/VeraCrypt/) on this one, and restore directly into a vault when I do my restores. This is only necessary if you're wanting to keep everything encrypted at every step. This provides me with a 4th backup that's air gapped, but that’s honestly just overkill. The reason to do it on a different hard drive is just so you don’t have to unplug or fiddle with your one that’s always plugged in. If you’re not doing restores, you’re not really checking that you know you have backups. Then, when I’m done with the restore, I unplug the hard drive. This provides me with a single, air gapped, back up. I keep two full copies here. So, short of someone waiting a year to encrypt all my files for ransomware, I can lose at most, 6 months of data. Still a lot, but not the important stuff. Technically this is referred to as 3-2-1-1-0, 3 copies, 2 mediums, 1 offsite, 1 air gapped, 0 errors. Although the 0 errors is a bit of a stretch since the verify process is weak and in-frequent.
+Then, every six months I’ll restore from my cloud backup to a fourth external hard drive. I installed [VeraCrypt](https://www.veracrypt.fr/code/VeraCrypt/) on this one, and restore directly into a vault when I do my restores. This is only necessary if you're wanting to keep everything encrypted at every step. This provides me with a 4th backup that's air gapped, but that’s honestly just overkill. The reason to do it on a different hard drive is just so you don’t have to unplug or fiddle with your one that’s always plugged in. If you’re not doing restores, you’re not really checking that you know you have backups. Then, when I’m done with the restore, I unplug the hard drive. This provides me with a single, air gapped, back up. I keep two full copies here. So, short of someone waiting a year to encrypt all my files for ransomware, I can lose at most, 6 months of data. Still a lot, but not the important stuff. Technically this is referred to as 3-2-1-1-0, 3 copies, 2 mediums, 1 offsite, 1 air gapped, 0 errors. Although the 0 errors is a bit of a stretch since the verify process of restoring is weak and in-frequent.
 
 </br>
 

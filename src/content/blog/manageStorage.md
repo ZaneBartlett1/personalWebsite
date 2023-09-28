@@ -1,5 +1,5 @@
 ---
-title: Managing storage
+title: Storage
 date: 2023-01-19T00:00:01
 tags:
     - digital living

@@ -1,16 +1,22 @@
 ---
-title: How I manage my web browser
+title: Web browser
 date: 2023-01-19T00:00:07
 tags:
     - digital living
 ---
 
-Firefox as the search browser, change these bullet points by going to about:profile, search the bold
-* New Windows and Tabs: I set new tabs and new windows to a blank page, this has helped me so much to be able to think. If I need to think, open a new tab. It’s just a blank page with a search bar. This with keywords you don’t need recommendations and it’s just one less thing with too many options.
-* Enhanced Tracking Protection: I changed this to strict and literally haven’t encountered a single problem at all. 
-Search Engine: DuckDuckGo
-Tabs I always have opened and pinned
-* Youtube. I think a lot of people miss out on how much good stuff is on Youtube. Here is a list of people I’m subscribed to, covering a range of topics. You can go to youtube and search up the channel name here to find them.
+**Setting up the browser**
+</br>I use Firefox as the search browser, then go through and make these changes. You can go to about:preferences, search the bold.
+
+* **New Windows and Tabs**: I set new tabs and new windows to a blank page, this has helped me so much to be able to think. If I need to think, open a new tab. It’s just a blank page with a search bar. This with keywords you don’t need recommendations and it’s just one less thing with too many options.
+* **Enhanced Tracking Protection**: I changed this to custom and the cookies dropdown to "Cross-site tracking cookies, and isolate other cross-site cookies and literally haven’t encountered a single problem at all. This is honestly basically what you would assume standard [claims to be per Firefox](https://support.mozilla.org/en-US/kb/trackers-and-scripts-firefox-blocks-enhanced-track#w_cross-site-tracking-cookies). If you search for it,
+* **Search Engine**: DuckDuckGo
+
+
+**Tabs I always have opened and pinned**
+
+* Youtube - I think a lot of people miss out on how much good stuff is on Youtube. Here is a list of people I’m subscribed to, covering a range of topics. You can go to youtube and search up the channel name here to find them. <details><summary>View Channels</summary>
+
    * General science and engineering
       * 3Blue1Brown
       * CGP Grey
@@ -54,16 +60,23 @@ Tabs I always have opened and pinned
       * Coffeezilla
    * VR
       * ThrillSeeker
-* Google calendar
-* Google drive
-* Gmail
-* asana
-Extensions, I keep Bitwarden and Ublock Origin pinned
+</details>
+
+
+* Proton Mail
+* Proton Calendar
+* Asana
+
+**Extensions**
+</br>I keep Bitwarden and Ublock Origin pinned
+
 * Bitwarden
 * Ublock Origin
 * AcitivtyWatch
 * Gnome shell integration
-Bookmarks (Bold are folders)
+
+**Bookmarks** (Bold are folders)
+
 * **Learning**
    * I have a lot of stuff specific to me, but the key point is having a bookmark folder for learning
 * **Finance**

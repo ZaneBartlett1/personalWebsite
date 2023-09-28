@@ -1,5 +1,5 @@
 ---
-title: How I manage my tasks
+title: Tasks
 date: 2023-01-19T00:00:15
 tags:
     - digital living
